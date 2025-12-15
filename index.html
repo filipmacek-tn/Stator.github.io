@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paweł Marczuk - STATOR</title>
+    <meta name="description" content="Cyfrowa wizytówka Pawła Marczuka - właściciela salonu narzędziowego STATOR." />
+    <meta name="theme-color" content="#FF6720" />
+
+    <style>
+        :root{
+            --accent:#FF6720;
+            --text:#111111;
+            --muted:#6b7280;
+            --bg:#ffffff;
+            --radius:18px;
+        }
+
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .wrap{
+            min-height:100dvh;
+            display:grid;
+            place-items:center;
+            padding:20px;
+        }
+
+        .card{
+            width:100%;
+            max-width:420px;
+            border-radius:var(--radius);
+            padding:24px 20px 28px;
+            text-align:center;
+        }
+
+        .avatar{
+            width:120px;
+            height:120px;
+            margin:0 auto 14px;
+            border-radius:50%;
+            overflow:hidden;
+            border:3px solid var(--accent);
+            background:#fff;
+        }
+        .avatar img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            display:block;
+        }
+
+        h1{
+            font-size:1.5rem;
+            font-weight:700;
+            margin:0;
+            letter-spacing:.3px;
+        }
+
+        .name-gap{margin-bottom:18px}
+
+        .actions{
+            display:grid;
+            gap:12px;
+        }
+
+        .btn{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:10px;
+            padding:15px;
+            border-radius:14px;
+            background:var(--accent);
+            color:#fff;
+            font-weight:600;
+            text-decoration:none;
+            font-size:1rem;
+            transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease;
+        }
+
+        .btn:active{
+            transform: scale(0.97);
+            box-shadow: inset 0 2px 6px rgba(0,0,0,.25);
+        }
+
+        .btn.secondary{
+            background:#fff;
+            color:var(--text);
+            border:1px solid #e5e7eb;
+        }
+
+        .btn.secondary:active{
+            background:#f9fafb;
+        }
+
+        .btn.secondary{
+            background:#fff;
+            color:var(--text);
+            border:1px solid #e5e7eb;
+        }
+
+        footer{
+            margin-top:22px;
+            font-size:.85rem;
+            color:var(--muted);
+        }
+    </style>
+</head>
+<body>
+
+<main class="wrap">
+    <section class="card" itemscope itemtype="https://schema.org/Person">
+
+        <div class="avatar">
+            <img src="assets/pawel-marczuk.jpg" alt="Paweł Marczuk" loading="lazy" />
+        </div>
+
+        <h1 itemprop="name">Paweł Marczuk</h1>
+        <div class="name-gap"></div>
+
+        <div class="actions">
+            <a class="btn" href="tel:+48601702401">📞 +48 601 702 401</a>
+            <a class="btn secondary" href="mailto:p.marczuk@stator.pl">✉️ p.marczuk@stator.pl</a>
+            <a class="btn secondary" href="https://stator.pl" target="_blank" rel="noopener">🌐 stator.pl</a>
+            <a class="btn" href="assets/pawel-marczuk.vcf" download type="text/vcard">📇 Zapisz wizytówkę</a>
+        </div>
+
+        <footer>
+            Salon Narzędziowy STATOR
+        </footer>
+
+    </section>
+</main>
+
+</body>
+</html>
